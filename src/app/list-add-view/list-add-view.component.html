@@ -1,0 +1,10 @@
+<input placeholder="enter item here"  [(ngModel)]="listItem"><button (click)="onAddItem()">Add</button>
+
+<table>
+    <th>item</th>
+    <th>delete</th>
+    <tr *ngFor="let item of list; let i = index">
+        <td>{{item}}</td>
+        <td><button (click)="onDeleteItem(i)">Delete</button></td>
+    </tr>
+</table>
